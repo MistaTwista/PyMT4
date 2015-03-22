@@ -14,7 +14,7 @@ A simple example in python:
 Prerequisites:
  - Metatrader has a chart running pymt4_host.mq4, allowing execution of dll calls.
  - PyMT4.pyd is available on PYTHONPATH
-
+```
 	from PyMT4 import *
 	
 	
@@ -28,7 +28,7 @@ Prerequisites:
 	# We will never get here, but Disconnect() should be called when 
 	# we want to disconnect the current session.
 	Disconnect()
-
+```
 	
 The PyMT4 module contains most of the API. Custom Indicators are not yet supported, but 
 should be simple enough to add in the future.
