@@ -106,7 +106,7 @@ namespace PyMT4
 			return result;
 		}
 
-		const char* getStringArgument(char* stringbuffer);
+		const wchar_t* getStringArgument(wchar_t* stringbuffer);
 
 		void shutdown();
 		void queueCommand(PendingCommandPtr pendingCommand);

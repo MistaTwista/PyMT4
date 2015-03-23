@@ -20,7 +20,7 @@
 
 
 
-#ifndef _DEBUG
+#ifdef _DEBUG
 #include <stdio.h>
 #include <io.h>
 #include <fcntl.h>

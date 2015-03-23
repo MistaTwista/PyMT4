@@ -38,7 +38,7 @@ IOServerPtr IOServer::m_instance;
  *
  */
 
-int32_t IOServer::WindowUpdateMsg = RegisterWindowMessage(L"MetaTrader4_Internal_Message");
+int32_t IOServer::WindowUpdateMsg = RegisterWindowMessage("MetaTrader4_Internal_Message");
 
 IOServer::~IOServer()
 {
@@ -136,11 +136,10 @@ int32_t IOServer::pendingCommand()
 
 
 
-const char* IOServer::getStringArgument(char* stringbuffer)
+const wchar_t* IOServer::getStringArgument(wchar_t* stringbuffer)
 {
 	std::string result;
 	Serializer<std::string>::deserializeItem(&result,&_currentCommand->dataPos);
-
 	std::copy(result.begin(),result.end(),stringbuffer);
 	stringbuffer[result.size()] = NULL;
 	

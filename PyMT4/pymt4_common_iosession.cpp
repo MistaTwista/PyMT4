@@ -94,7 +94,7 @@ void IOSessionCommon::headerHandler(const boost::system::error_code& error)
 
 		Buffer::iterator readBufferIter = m_readBuffer.begin();
 		MessageTypeIdentifier			messageTypeIdentifier;
-		size_t							messageContentSize;
+		uint32_t							messageContentSize;
 
 		Serializer<MessageTypeIdentifier>::deserializeItem(&messageTypeIdentifier,&readBufferIter);
 		Serializer<uint32_t>::deserializeItem(&messageContentSize,&readBufferIter);

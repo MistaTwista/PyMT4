@@ -26,7 +26,7 @@
  *
  */
 
-#ifndef _DEBUG
+#ifdef _DEBUG
 
 
 std::string lastOwner = "";
@@ -107,7 +107,7 @@ EXPORT(BOOL) pymt4_getBoolArgument()
 	return (BOOL)ioserver->getPodArgument<bool>();
 }
 
-EXPORT(const char*) pymt4_getStringArgument(char* string)
+EXPORT(const wchar_t*) pymt4_getStringArgument(wchar_t* string)
 {
 
 	IOServerPtr ioserver = IOServer::Instance();
